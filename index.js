@@ -24,7 +24,7 @@ const db = mongoose.connection
 db.on('error', error => console.error(error))
 db.once('open', DB_URI => console.log('Database Connected'))
 
-app.get('/connect', (req, res) => {
+app.get('/', (req, res) => {
     res.send('It has been connected')
 })
 
